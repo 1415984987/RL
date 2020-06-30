@@ -121,12 +121,12 @@ def main():
             if eval_reward >= score:
                 score = eval_reward
                 best_episode = episode
-                agent.save('./model_junp_best.ckpt')
+                agent.save('./model_paddle_best.ckpt')
                 print('save model_best')
             print('model_best：',best_episode,score)
         episode += 1
     # 训练结束，保存模型
-    save_path = './jump_model.ckpt'
+    save_path = './paddle_model.ckpt'
     agent.save(save_path)
 
 
